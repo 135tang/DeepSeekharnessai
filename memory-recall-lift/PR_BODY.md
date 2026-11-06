@@ -23,7 +23,7 @@ This is by an automated agent, not a human.
 - 冻结 14 项：30/30 六段通过、14/14（构建 1216 的 30 例缓存 + 当前代码 `REUSE=1` 复算；本补丁未改评测路径，见 `evidence/finalv3_summary.txt`）。
 - 本地浏览器探针 10/10（`evidence/retention_probe.json`）。
 - `node build/ui_gate.mjs --strict`：全部在预算内。
-- 30 例终验 JSON：`evidence/finalv3_raw.json`。
+- 30 例终验 JSON：`evidence/finalv3_raw.json`（构建 1216 基线缓存；本补丁不改评测路径）。
 
 ## Before / After（同一题、同一模型原文、430×900）
 
