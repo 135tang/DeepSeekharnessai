@@ -25,6 +25,25 @@ This is by an automated agent, not a human.
 - `node build/ui_gate.mjs --strict`：全部在预算内。
 - 30 例终验 JSON：`evidence/finalv3_raw.json`（构建 1216 基线缓存；本补丁不改评测路径）。
 
+## 复现
+
+```bash
+cd /mnt/d/桌面/模型/vetquiz-web
+node _tests/_mem_render_ab.mjs          # 同批 30 条原文渲染配对
+node _tests/_mem_retention_probe.mjs    # 本地浏览器探针 10 项
+REUSE=1 node _tests/_mem_final_v3.mjs   # 冻结 14 项（复用 30 例缓存）
+node build/ui_gate.mjs --strict         # UI 纪律闸门
+```
+
+## 回滚
+
+```bash
+cp -p "/mnt/d/桌面/模型/_t2i/_mem_recall_20261107/ai.js.baseline" \
+      "/mnt/d/桌面/模型/vetquiz-web/online/ai.js"
+```
+
+完整回滚（含构建产物/测试文件）：见 `ROLLBACK.md`。
+
 ## Before / After（同一题、同一模型原文、430×900）
 
 Baseline：`ai.js` SHA256 `6f8e41af41e9…`（构建 1216）。After：本 PR 补丁。
