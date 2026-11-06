@@ -1,0 +1,36 @@
+{
+ "at": "2026-11-06T18:11:29.088Z",
+ "cutoff": "2026-11-04T08:20:00Z",
+ "endpoint": "/api/metrics/report",
+ "arms": {
+  "新队列(>=CUTOFF)": {
+   "status": 200,
+   "rows": 0,
+   "n": 0,
+   "pass": 0,
+   "rate": null
+  },
+  "旧队列(<CUTOFF)": {
+   "status": 200,
+   "rows": 0,
+   "n": 0,
+   "pass": 0,
+   "rate": null
+  },
+  "全部 d7": {
+   "status": 200,
+   "rows": 0,
+   "n": 0,
+   "pass": 0,
+   "rate": null
+  },
+  "全部事件": {
+   "status": 200,
+   "rows": 0,
+   "n": 0,
+   "pass": 0,
+   "rate": null
+  }
+ },
+ "verdict": "未开始：d7 两条队列都 0 条（计时从第一份真实 d7 复述产生的那天起算）"
+}

@@ -1,0 +1,594 @@
+{
+ "at": "2026-11-06T18:11:53.987Z",
+ "n": 30,
+ "old": {
+  "n": 30,
+  "acrVisible": 0,
+  "picVisible": 2,
+  "quizVisible": 17,
+  "quizLeaks": 17,
+  "extraSections": 6,
+  "selfTestSplit": 4
+ },
+ "new": {
+  "n": 30,
+  "acrVisible": 30,
+  "picVisible": 30,
+  "quizVisible": 30,
+  "quizLeaks": 0,
+  "extraSections": 0,
+  "selfTestSplit": 30
+ },
+ "rows": [
+  {
+   "tag": "名解-1",
+   "old": {
+    "acr": "表",
+    "pic": "",
+    "quiz": "",
+    "quizLeaks": false,
+    "extra": 0,
+    "split": false
+   },
+   "new": {
+    "acr": "研发机一",
+    "pic": "1 三十只白鼠挤成一团抬一支放大镜贴住病鼠溃烂的爪，镜柄烫得爪垫冒烟（=研究疾病发生的原因）",
+    "quiz": "问：兽医病理学是一门怎样的学科？",
+    "quizLeaks": false,
+    "extra": 0,
+    "split": true
+   }
+  },
+  {
+   "tag": "名解-2",
+   "old": {
+    "acr": "表",
+    "pic": "",
+    "quiz": "问：什么是疾病？答：机体在外界致病因素下，因自稳调节系统发生紊乱而发生的异常生命活动过程。",
+    "quizLeaks": true,
+    "extra": 0,
+    "split": false
+   },
+   "new": {
+    "acr": "机外自紊异",
+    "pic": "1 白鼠被三十只同伴挤成一团，笼壁烫得爪垫一缩（=机体）",
+    "quiz": "问：什么是疾病？",
+    "quizLeaks": false,
+    "extra": 0,
+    "split": true
+   }
+  },
+  {
+   "tag": "名解-3",
+   "old": {
+    "acr": "表",
+    "pic": "",
+    "quiz": "",
+    "quizLeaks": false,
+    "extra": 0,
+    "split": true
+   },
+   "new": {
+    "acr": "致到症",
+    "pic": "1 白鼠抱一支比自己大十倍的放大镜盯住病灶，镜柄冰得爪垫一缩（=致病因素作用于机体开始）",
+    "quiz": "问：潜伏期从什么开始到什么时期？",
+    "quizLeaks": false,
+    "extra": 0,
+    "split": true
+   }
+  },
+  {
+   "tag": "名解-4",
+   "old": {
+    "acr": "表",
+    "pic": "",
+    "quiz": "问：淤血（静脉性充血）是什么？ 答：由于静脉回流受阻，静脉血液回流障碍而使组织器官静脉血含量增多的现象，又称静脉性充血。",
+    "quizLeaks": true,
+    "extra": 0,
+    "split": false
+   },
+   "new": {
+    "acr": "由静而增又",
+    "pic": "1 白鼠抱一根比自己大十倍的止血带死命拽住回流口，带子冰得爪垫一缩（=由于静脉回流受阻）",
+    "quiz": "问：淤血（静脉性充血）是什么？",
+    "quizLeaks": false,
+    "extra": 0,
+    "split": true
+   }
+  },
+  {
+   "tag": "名解-5",
+   "old": {
+    "acr": "表",
+    "pic": "",
+    "quiz": "问：心衰细胞是什么？答：肺淤血时，肺泡腔内可见吞噬了含铁血黄素的巨噬细胞。",
+    "quizLeaks": true,
+    "extra": 0,
+    "split": false
+   },
+   "new": {
+    "acr": "肺肺吞含巨",
+    "pic": "1 白鼠踩在淤成暗红的肺泡腔壁上，血泥黏得扯出丝（=肺淤血时）",
+    "quiz": "问：心衰细胞是什么？",
+    "quizLeaks": false,
+    "extra": 0,
+    "split": true
+   }
+  },
+  {
+   "tag": "名解-6",
+   "old": {
+    "acr": "表",
+    "pic": "",
+    "quiz": "",
+    "quizLeaks": false,
+    "extra": 0,
+    "split": true
+   },
+   "new": {
+    "acr": "肝部暗黄相",
+    "pic": "1 槟榔切面一头扎进暗红血泊，血泊漫过它三圈纹路，黏得扯出细丝（=肝脏发生淤血）",
+    "quiz": "问：槟榔肝是怎么形成的、切面什么样？",
+    "quizLeaks": false,
+    "extra": 0,
+    "split": true
+   }
+  },
+  {
+   "tag": "名解-7",
+   "old": {
+    "acr": "表",
+    "pic": "白鼠抱着那块硬血疙瘩站在心腔口，尾巴压得贴地（=块状物）",
+    "quiz": "问：血栓是什么？答：血液在心脏或血管中凝结的块状物。注意区分：血栓是结果，血栓形成是过程。",
+    "quizLeaks": true,
+    "extra": 3,
+    "split": false
+   },
+   "new": {
+    "acr": "血心凝块",
+    "pic": "1 白鼠扑进心腔，爪下的血液黏得扯出细丝（=血液）",
+    "quiz": "问：血栓是什么？",
+    "quizLeaks": false,
+    "extra": 0,
+    "split": true
+   }
+  },
+  {
+   "tag": "名解-8",
+   "old": {
+    "acr": "表",
+    "pic": "",
+    "quiz": "问：栓塞的定义是什么？ 答：血液中不溶于血的物质随血液运行引起血管阻塞的过程。（含全部词组）",
+    "quizLeaks": true,
+    "extra": 0,
+    "split": false
+   },
+   "new": {
+    "acr": "血随引",
+    "pic": "1 白鼠把一团蜡状碎屑塞进透明血管，碎屑多得挤成三十粒硬珠，管壁硌得爪尖发麻（=血液中不溶于血的物质）",
+    "quiz": "问：栓塞的定义是什么？",
+    "quizLeaks": false,
+    "extra": 0,
+    "split": true
+   }
+  },
+  {
+   "tag": "名解-9",
+   "old": {
+    "acr": "表",
+    "pic": "",
+    "quiz": "问：弥散性血管内凝血（DIC）是什么？答：在病理因素的作用下，血液凝固性增高，微循环内广泛微血栓形成，是一个病理过程。",
+    "quizLeaks": true,
+    "extra": 0,
+    "split": false
+   },
+   "new": {
+    "acr": "病血微广病",
+    "pic": "1 白鼠蹲在病理切片前，爪垫被福尔马林浸得发白发皱，一缩就裂（=病理因素的作用下）",
+    "quiz": "问：弥散性血管内凝血（DIC）是什么？",
+    "quizLeaks": false,
+    "extra": 0,
+    "split": true
+   }
+  },
+  {
+   "tag": "名解-10",
+   "old": {
+    "acr": "表",
+    "pic": "",
+    "quiz": "",
+    "quizLeaks": false,
+    "extra": 0,
+    "split": false
+   },
+   "new": {
+    "acr": "微组代严病",
+    "pic": "1 白鼠爪按在细如发丝的血管上，灌流液漏得只剩滴答声，急得胡须乱颤（=微循环有效灌流量不足）",
+    "quiz": "问：休克的定义是什么？",
+    "quizLeaks": false,
+    "extra": 0,
+    "split": true
+   }
+  },
+  {
+   "tag": "名解-11",
+   "old": {
+    "acr": "表",
+    "pic": "",
+    "quiz": "",
+    "quizLeaks": false,
+    "extra": 0,
+    "split": false
+   },
+   "new": {
+    "acr": "组血状",
+    "pic": "1 白鼠双爪捧起一团肿胀的组织和器官，烫得爪垫一缩（=组织和器官）",
+    "quiz": "问：充血是指什么？",
+    "quizLeaks": false,
+    "extra": 0,
+    "split": true
+   }
+  },
+  {
+   "tag": "名解-12",
+   "old": {
+    "acr": "表",
+    "pic": "",
+    "quiz": "问：水肿是什么？答：等渗性液体在细胞间隙内聚集过多。",
+    "quizLeaks": true,
+    "extra": 0,
+    "split": false
+   },
+   "new": {
+    "acr": "等细聚",
+    "pic": "1 白鼠拖着一袋比它大十倍的等渗液体塞进细胞缝，袋壁冰得爪垫一缩（=等渗性液体）",
+    "quiz": "问：水肿是什么？",
+    "quizLeaks": false,
+    "extra": 0,
+    "split": true
+   }
+  },
+  {
+   "tag": "名解-13",
+   "old": {
+    "acr": "表",
+    "pic": "",
+    "quiz": "",
+    "quizLeaks": false,
+    "extra": 0,
+    "split": false
+   },
+   "new": {
+    "acr": "细明现",
+    "pic": "1 白鼠抱一只比自己大十倍的鼓胀水袋盯住水位线，袋壁凉得爪垫一缩（=细胞外液容量）",
+    "quiz": "问：脱水指什么？",
+    "quizLeaks": false,
+    "extra": 0,
+    "split": true
+   }
+  },
+  {
+   "tag": "名解-14",
+   "old": {
+    "acr": "表",
+    "pic": "",
+    "quiz": "",
+    "quizLeaks": false,
+    "extra": 0,
+    "split": true
+   },
+   "new": {
+    "acr": "实数功脂",
+    "pic": "1 一双手捏住一颗干瘪细胞，指腹陷进褶皱里，细胞缩得只剩原来一小半（=实质细胞体积缩小）",
+    "quiz": "问：萎缩的定义和要点是什么？",
+    "quizLeaks": false,
+    "extra": 0,
+    "split": true
+   }
+  },
+  {
+   "tag": "名解-15",
+   "old": {
+    "acr": "表",
+    "pic": "",
+    "quiz": "问：脂肪变性的定义是什么？ 答：在病理因素的作用下，正常细胞内甘油三酯或脂滴出现异常增多的现象。",
+    "quizLeaks": true,
+    "extra": 0,
+    "split": false
+   },
+   "new": {
+    "acr": "在正甘出",
+    "pic": "1 白鼠顶着一阵标着“病理因素”的冷风往前挪，风快得只剩影子，胡须冻得打结（=在病理因素的作用下）",
+    "quiz": "问：脂肪变性的定义是什么？",
+    "quizLeaks": false,
+    "extra": 0,
+    "split": true
+   }
+  },
+  {
+   "tag": "解答-1",
+   "old": {
+    "acr": "表",
+    "pic": "",
+    "quiz": "",
+    "quizLeaks": false,
+    "extra": 0,
+    "split": false
+   },
+   "new": {
+    "acr": "静静心胸",
+    "pic": "1 白鼠用背顶住被巨石压扁的软管，管壁贴得只剩一条缝，石头凉得它脊背一抖（=静脉受压）",
+    "quiz": "问：淤血发生的原因有哪些？",
+    "quizLeaks": false,
+    "extra": 0,
+    "split": true
+   }
+  },
+  {
+   "tag": "解答-2",
+   "old": {
+    "acr": "表",
+    "pic": "",
+    "quiz": "",
+    "quizLeaks": false,
+    "extra": 0,
+    "split": true
+   },
+   "new": {
+    "acr": "心血血",
+    "pic": "1 白鼠抱一块比它大十倍的破冰板撞向血管内壁，冰碴子扎得爪垫一缩（=心血管内膜损伤）",
+    "quiz": "问：血栓形成的条件有哪些？",
+    "quizLeaks": false,
+    "extra": 0,
+    "split": true
+   }
+  },
+  {
+   "tag": "解答-3",
+   "old": {
+    "acr": "表",
+    "pic": "",
+    "quiz": "问：血栓与血凝块在表面、质地、颜色、粘连四方面有何区别？答：血栓表面干燥粗糙无光泽，血凝块表面湿润平滑有光泽；血栓质地硬脆，血凝块柔软有弹性；血栓颜色红白相间，血凝块暗红色；血栓与血管壁粘连紧不易剥离，血凝块不与血管粘连。",
+    "quizLeaks": true,
+    "extra": 0,
+    "split": false
+   },
+   "new": {
+    "acr": "干硬红粘",
+    "pic": "1 一双手先抠下干痂，指腹蹭得沙沙响，又托起湿块，滑得从指缝溜出两次（=干燥粗糙无光泽，血凝块表面湿润平滑有光泽）",
+    "quiz": "问：血栓与血凝块在表面、质地、颜色、粘连四方面有何区别？",
+    "quizLeaks": false,
+    "extra": 0,
+    "split": true
+   }
+  },
+  {
+   "tag": "解答-4",
+   "old": {
+    "acr": "表",
+    "pic": "",
+    "quiz": "问：休克的防治原则有哪些？ 答：消除病因、改善微循环、保护细胞、纠正酸中毒、维持器官功能。",
+    "quizLeaks": true,
+    "extra": 0,
+    "split": false
+   },
+   "new": {
+    "acr": "消改保纠维",
+    "pic": "1 白鼠叼着铁锹把三十个病根连根铲起，土块烫得冒烟（=消除病因）",
+    "quiz": "问：休克的防治原则有哪些？",
+    "quizLeaks": false,
+    "extra": 0,
+    "split": true
+   }
+  },
+  {
+   "tag": "解答-5",
+   "old": {
+    "acr": "表",
+    "pic": "",
+    "quiz": "",
+    "quizLeaks": false,
+    "extra": 0,
+    "split": false
+   },
+   "new": {
+    "acr": "血毛组淋球",
+    "pic": "1 白鼠抱一支比它大十倍的放大镜盯住病灶，镜柄冰得爪垫一缩（=毛细血管静体压升高）",
+    "quiz": "问：水肿发生的原因有哪些？",
+    "quizLeaks": false,
+    "extra": 0,
+    "split": true
+   }
+  },
+  {
+   "tag": "解答-6",
+   "old": {
+    "acr": "表",
+    "pic": "",
+    "quiz": "问：局部性萎缩发生的原因有哪些？ 答：废用性萎缩、压迫性萎缩、缺血性萎缩、神经性萎缩、内分泌性萎缩",
+    "quizLeaks": true,
+    "extra": 0,
+    "split": false
+   },
+   "new": {
+    "acr": "废压缺神内",
+    "pic": "1 白鼠把跑轮锁死三个月，后腿缩成两根干面条，毛皮凉得贴住骨头（=废用性萎缩）",
+    "quiz": "问：局部性萎缩发生的原因有哪些？",
+    "quizLeaks": false,
+    "extra": 0,
+    "split": true
+   }
+  },
+  {
+   "tag": "解答-7",
+   "old": {
+    "acr": "表",
+    "pic": "",
+    "quiz": "问：炎症的生物学意义是什么？ 答：大多有利——清除病原体、限制炎症扩散、启动组织修复、启动免疫反应；但过度炎症致疼痛、损伤和过度瘢痕，是一把双刃剑。",
+    "quizLeaks": true,
+    "extra": 0,
+    "split": false
+   },
+   "new": {
+    "acr": "清限启免过",
+    "pic": "1 一双手攥住细菌往外甩，甩得指节发白（=清除病原体）",
+    "quiz": "问：炎症的生物学意义是什么？",
+    "quizLeaks": false,
+    "extra": 0,
+    "split": true
+   }
+  },
+  {
+   "tag": "解答-8",
+   "old": {
+    "acr": "表",
+    "pic": "",
+    "quiz": "",
+    "quizLeaks": false,
+    "extra": 0,
+    "split": false
+   },
+   "new": {
+    "acr": "生核分生转",
+    "pic": "1 白鼠蹬滚轮，恶性档快得只剩影子，良性档轮轴冻成硬块硌得爪垫一缩（=生长速度：良性慢，恶性快）",
+    "quiz": "问：良性肿瘤与恶性肿瘤的区别有哪些？",
+    "quizLeaks": false,
+    "extra": 0,
+    "split": true
+   }
+  },
+  {
+   "tag": "解答-9",
+   "old": {
+    "acr": "表",
+    "pic": "白鼠三天夹着烫得冒烟的温度计不撒手，温差刻度只挪一格（=稽留热昼夜温差1℃以内）",
+    "quiz": "问：发热类型及特点与代表病？ 答：稽留热——高温持续3天以上、昼夜温差1℃以内，见于猪丹毒、炭疽、大叶性肺炎；弛张热——昼夜温差超过1℃、波动大，见于小叶性肺炎、败血症；间歇热——高热期与无热期交替，见于血液原虫病、马传染性贫血；不规则热—",
+    "quizLeaks": true,
+    "extra": 3,
+    "split": false
+   },
+   "new": {
+    "acr": "稽弛间不回三",
+    "pic": "1 白鼠把温度计夹在腋下三天不撒手，玻璃壁烫得冒烟（=稽留热）",
+    "quiz": "问：发热类型及特点与代表病？",
+    "quizLeaks": false,
+    "extra": 0,
+    "split": true
+   }
+  },
+  {
+   "tag": "解答-10",
+   "old": {
+    "acr": "表",
+    "pic": "",
+    "quiz": "问：疾病发生的原因有哪些？答：生物性因素（细菌、真菌、病毒等病原微生物感染）、化学性因素（强酸、强碱、氰化物、有机磷农药中毒）、物理性因素（高温、低温、电击、棍棒敲打）、营养性因素（维生素A、糖、脂肪、蛋白质等缺乏）。",
+    "quizLeaks": true,
+    "extra": 0,
+    "split": false
+   },
+   "new": {
+    "acr": "生化物营",
+    "pic": "1 白鼠搂着成群细菌、真菌和病毒挤在伤口边，菌落黏得扯出丝（=生物性因素：细菌、真菌、病毒等病原微生物感染）",
+    "quiz": "问：疾病发生的原因有哪些？",
+    "quizLeaks": false,
+    "extra": 0,
+    "split": true
+   }
+  },
+  {
+   "tag": "解答-11",
+   "old": {
+    "acr": "表",
+    "pic": "",
+    "quiz": "问：疾病经过分为哪些类型？各是什么时期？ 答：按时期为潜伏期→前驱期→明显期→转归期；按急缓为最急性型、急性型、亚急性型、慢性型。",
+    "quizLeaks": true,
+    "extra": 0,
+    "split": false
+   },
+   "new": {
+    "acr": "潜前明转最急亚慢",
+    "pic": "1 白鼠蜷成核桃大一团缩在垫料底下，鼻息凉得爪尖发麻（=潜伏期）",
+    "quiz": "问：疾病经过分为哪些类型？各是什么时期？",
+    "quizLeaks": false,
+    "extra": 0,
+    "split": true
+   }
+  },
+  {
+   "tag": "解答-12",
+   "old": {
+    "acr": "表",
+    "pic": "",
+    "quiz": "问：渗出性炎症可分为哪些类型？ 答：浆液性炎、纤维素性炎、化脓性炎、卡他性炎、出血性炎。",
+    "quizLeaks": true,
+    "extra": 0,
+    "split": false
+   },
+   "new": {
+    "acr": "浆纤脓卡血",
+    "pic": "1 白鼠抱着水囊一挤，清亮的浆液漫过爪背，凉得脚趾一蜷（=浆液性炎）",
+    "quiz": "问：渗出性炎症可分为哪些类型？",
+    "quizLeaks": false,
+    "extra": 0,
+    "split": true
+   }
+  },
+  {
+   "tag": "解答-13",
+   "old": {
+    "acr": "表",
+    "pic": "",
+    "quiz": "问：影响药物作用的因素有哪些？答：药物方面因素（剂量、剂型、给药方案、联合用药及药物相互作用）；动物方面因素（生理因素、病理因素、个体差异）；饲养管理和环境因素。",
+    "quizLeaks": true,
+    "extra": 0,
+    "split": false
+   },
+   "new": {
+    "acr": "药济动升司",
+    "pic": "1 白鼠两只前爪按住一只药瓶，瓶盖烫得冒烟，它赶紧松开，甩了甩爪尖（=药物方面因素）",
+    "quiz": "问：影响药物作用的因素有哪些？",
+    "quizLeaks": false,
+    "extra": 0,
+    "split": true
+   }
+  },
+  {
+   "tag": "解答-14",
+   "old": {
+    "acr": "表",
+    "pic": "",
+    "quiz": "",
+    "quizLeaks": false,
+    "extra": 0,
+    "split": false
+   },
+   "new": {
+    "acr": "正熟制合",
+    "pic": "1 手捏听诊器贴住畜体，畜体大得占满整间栏舍，听筒烫得指尖一弹（=正确诊断）",
+    "quiz": "问：合理用药的原则有哪些？",
+    "quizLeaks": false,
+    "extra": 0,
+    "split": true
+   }
+  },
+  {
+   "tag": "解答-15",
+   "old": {
+    "acr": "表",
+    "pic": "",
+    "quiz": "",
+    "quizLeaks": false,
+    "extra": 0,
+    "split": false
+   },
+   "new": {
+    "acr": "抗抗抗抗影",
+    "pic": "1 白鼠抱一团比自己大十倍的冰袋压住红肿处，冰袋冻得它爪垫发麻（=抗炎作用）",
+    "quiz": "问：糖皮质激素的药理作用有哪些？",
+    "quizLeaks": false,
+    "extra": 0,
+    "split": true
+   }
+  }
+ ]
+}
