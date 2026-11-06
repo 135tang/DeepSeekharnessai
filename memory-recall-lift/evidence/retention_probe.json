@@ -1,0 +1,94 @@
+{
+ "at": "2026-11-06T18:10:09.110Z",
+ "ok": true,
+ "checks": {
+  "cardAcr": true,
+  "cardPic": true,
+  "cardHidesAnswer": true,
+  "cleanNoExtraSections": true,
+  "selfTestAnswerSplit": true,
+  "dockMounted": true,
+  "metricsPosted": true,
+  "checkpointD7": true,
+  "passTrue": true,
+  "qidMatch": true
+ },
+ "detail": {
+  "boot": {
+   "gate": true,
+   "mount": "function",
+   "qs": 820
+  },
+  "card": {
+   "html": "<div class=\"mem4\"><div class=\"mem4-card\"><div class=\"mem4-t\">🔑 口诀</div><div class=\"mem4-b\">研发机一</div></div><div class=\"mem4-card\"><div class=\"mem4-t\">🎬 画面</div><div class=\"mem4-b\">1 三十只白鼠挤成一团抬一支放大镜贴住病鼠溃烂的爪，镜柄烫得爪垫冒烟（=研究疾病发生的原因）</div></div><div class=\"mem4-card mem4-quiz\" style=\"grid-column:1/-1;\"><div class=\"mem4-t\">🧪 自测（判分走 rcTwJudge）</div><div class=\"mem4-b\">问：兽医病理学是一门怎样的学科？</div><div class=\"uk-card\" style=\"background:var(--soft-blue);\"><div class=\"uk-title\">默写自测</div><div class=\"uk-note\" style=\"margin-top:6px;\">先写关键词，再点判分；判错会进错题本待确认。</div><div class=\"uk-wrap\"></div></div><div class=\"uk-card\" data-twcard=\"q0001\" style=\"margin-top:10px;\"><div class=\"uk-row\" style=\"margin-bottom:6px;\"><span class=\"tag book\">病理学</span><span class=\"tag\">名解</span><span class=\"uk-note\">第 1 / 1 条</span><button type=\"button\" class=\"uk-btn grey\" data-u=\"q0001\" data-act=\"rcTwPeek\" style=\"margin-left:auto;font-size:12px;padding:2px 10px;\">👁 看答案</button></div><div style=\"font-size:15px;font-weight:600;line-height:1.8;\">名词解释：兽医病理学</div><textarea class=\"tw-in\" data-u=\"q0001\" rows=\"4\" placeholder=\"凭记忆默写：写出定义/要点，不必和标准答案逐字一致…\" style=\"margin-top:8px;width:100%;box-sizing:border-box;padding:9px 11px;border:1px s",
+   "selfB": "问：兽医病理学是一门怎样的学科？",
+   "selfText": "🧪 自测（判分走 rcTwJudge）问：兽医病理学是一门怎样的学科？默写自测先写关键词，再点判分；判错会进错题本待确认。病理学名解第 1 / 1 条👁 看答案名词解释：兽医病理学判分 ›标准答案兽医病理学：研究疾病发生的原因、发展及机体在发展过程中形态结构、功能和代谢变化的一门学科。",
+   "hasAcr": true,
+   "hasPic": true,
+   "acr": "研发机一",
+   "cleanHasExtra": false,
+   "cleanSelfSplit": true
+  },
+  "telemetry": {
+   "mounted": true,
+   "id": "q0001",
+   "qid": "名词解释：兽医病理学",
+   "cap": [
+    {
+     "qid": "q0001",
+     "event_type": "recall",
+     "checkpoint": "d7",
+     "planned_due": "2026-11-06",
+     "score": 1,
+     "pass": true,
+     "stage": 1,
+     "variants_done": 0,
+     "variants_correct": 0,
+     "error_type": "",
+     "hint_level": 0,
+     "metacog": 0,
+     "anon_id": "a_mw5ai4ko51exjy",
+     "actual_at": "2026-11-06T18:10:17.640Z",
+     "app_version": "855",
+     "schema_version": "recall-v1"
+    }
+   ],
+   "event": {
+    "qid": "q0001",
+    "event_type": "recall",
+    "checkpoint": "d7",
+    "planned_due": "2026-11-06",
+    "score": 1,
+    "pass": true,
+    "stage": 1,
+    "variants_done": 0,
+    "variants_correct": 0,
+    "error_type": "",
+    "hint_level": 0,
+    "metacog": 0,
+    "anon_id": "a_mw5ai4ko51exjy",
+    "actual_at": "2026-11-06T18:10:17.640Z",
+    "app_version": "855",
+    "schema_version": "recall-v1"
+   }
+  },
+  "event": {
+   "qid": "q0001",
+   "event_type": "recall",
+   "checkpoint": "d7",
+   "planned_due": "2026-11-06",
+   "score": 1,
+   "pass": true,
+   "stage": 1,
+   "variants_done": 0,
+   "variants_correct": 0,
+   "error_type": "",
+   "hint_level": 0,
+   "metacog": 0,
+   "anon_id": "a_mw5ai4ko51exjy",
+   "actual_at": "2026-11-06T18:10:17.640Z",
+   "app_version": "855",
+   "schema_version": "recall-v1"
+  }
+ }
+}

@@ -1,0 +1,90 @@
+--- a/online/ai.js
++++ b/online/ai.js
+@@ -1826,11 +1826,14 @@
+   try { window.__memReadAt = Date.now(); } catch (eR0) {}
+   var t = String(txt || '');
+   function pick(re) { var m = re.exec(t); return m ? String(m[1]).replace(/[【】]/g, '').trim().slice(0, 120) : ''; }
+-  var pic = pick(/(?:画面句|画面)[：:]?\s*([^\n]{4,140})/);
+-  var acr = pick(/(?:口诀|首字连|谐音)[：:]?\s*([^\n]{2,60})/);
++  var pic = pick(/(?:画面句|画面)[】\s：:]*([^【\n][^\n]{3,139})/);
++  var acr = pick(/(?:口诀(?!表)|首字连|谐音)[】\s：:]*([^【\n][^\n]{1,59})/);
+   if (!acr && q && typeof memAcrOf === 'function') { try { acr = memAcrOf(q); } catch (eAcrCard) {} }
+-  var cmp = pick(/(?:对比锚|对比|辨析)[：:]?\s*([^\n]{4,140})/);
+-  var quiz = pick(/(?:自测题|自测)[：:]?\s*([^\n]{4,160})/);
++  var cmp = pick(/(?:对比锚|对比|辨析)[】\s：:]*([^【\n][^\n]{3,139})/);
++  var quiz = pick(/(?:自测题|自测)[】\s：:]*([^【\n][^\n]{3,159})/);
++  /* __mem_retrieval（11-07）：卡片自测只展示问题，答案留在判分/三級提示里。
++     模型原文 28/30 题把「问：…答：…」放在同一行；卡片能提取到的条目原来会直接把答案露出来。 */
++  if (quiz) quiz = String(quiz).split(/答[：:]/)[0].trim();
+   var h = '';
+   if (acr) h += '<div class="mem4-card"><div class="mem4-t">🔑 口诀</div><div class="mem4-b">' + escA(acr) + '</div></div>';
+   if (pic) h += '<div class="mem4-card"><div class="mem4-t">🎬 画面</div><div class="mem4-b">' + escA(pic) + '</div></div>';
+@@ -1849,7 +1852,7 @@
+       + '<button type="button" class="btn" data-mem-judge="1">✔ 判对</button>'
+       + '<button type="button" class="btn" data-mem-judge="0">✘ 判错</button>'
+       + '<span class="mem4-judge-res"></span></div></div>';
+-  } else if (quiz && q && window.UIkit && UIKit.dictationList) {
++  } else if (quiz && q && window.UIKit && UIKit.dictationList) {
+     try {
+       window.__mem4Q = q;
+       h += '<div class="mem4-card mem4-quiz" style="grid-column:1/-1;"><div class="mem4-t">🧪 自测（判分走 rcTwJudge）</div>'
+@@ -2175,7 +2178,17 @@
+ }
+ function memStructClean(t) {
+   try {
+-    return String(t || '')
++    var x = String(t || '');
++    /* __mem_retrieval（11-07）：六段卡最后一段是【答题】，模型偶尔会多写
++       【判断题】【填空题】【单选题】；产品明确不做这三种记忆卡，直接截掉。 */
++    var _ansAt = x.indexOf('【答题】');
++    if (_ansAt >= 0) {
++      var _extra = x.slice(_ansAt).search(/\n?【(?:判断题|填空题|单选题|多选题|选择题)】/);
++      if (_extra > 0) x = x.slice(0, _ansAt + _extra);
++    }
++    /* __mem_retrieval（11-07）：自测答案另起一行，卡片只显示问句，先测后看答案。 */
++    x = x.replace(/【自测】\s*问：([^\n]*?)\s*答：/g, '【自测】\n问：$1\n答：');
++    return x
+       .replace(/【口诀表】/g, '**口诀表**\n').replace(/【口诀】/g, '\n**口诀**\n')
+       .replace(/【画面】/g, '\n**画面**\n').replace(/【自测】/g, '\n**自测**\n')
+       .replace(/【复习】/g, '\n**复习**\n').replace(/【排除】/g, '\n**排除**\n');
+@@ -4196,6 +4209,9 @@
+     metricsPush(ev); metricsFlush();
+   } catch (e) {}
+ }
++/* __mem_d7_telemetry（11-07）：复习 dock 在另一个 IIFE 里，拿不到本函数；
++   显式挂到 window，dock 判分后才能把 d7 事件发到跨用户报表。 */
++try { window.__vetMetricsSend = metricsSend; } catch (eMSX) {}
+ function coachQualityHtml(coach) {
+   try {
+     if (!coach || !coach.quality) return '';
+@@ -10735,7 +10751,7 @@
+       + _conf
+       + ((Number(x.rec && x.rec.lapses) || 0) >= 2 ? '<div class="mem-rv-note">🔁 这条已错 ' + (Number(x.rec.lapses) || 0) + ' 次：先别重读原讲解，和「' + esc(confuseLine(q) || '同章同题型') + '」做一次区分。<button type="button" class="btn mem-rv-reencode" data-mem-reencode="' + esc(id) + '">🔁 换角度重讲</button></div>' : '')
+       + (noAns ? '' : '<button type="button" class="btn mem-rv-s">看答案</button><div class="mem-rv-ans" hidden>' + esc(String(q.a || '').slice(0, 240)) + '</div>')
+-      + '<textarea class="mem-rv-write" rows="2" placeholder="先默写 3 个关键词（不写不算）"></textarea>'
++      + '<textarea class="mem-rv-write" rows="2" placeholder="默写完整要点（先别看答案，覆盖不足会提示）"></textarea>'
+       + '<div class="mem-rv-acts"><button type="button" class="btn mem-rv-ok">✅ 答对了</button><button type="button" class="btn mem-rv-no">😵 没记住</button></div></div>';
+   }
+   function memHeadHtml(n, deferred) {
+@@ -10832,7 +10848,7 @@
+             return;
+           }
+         }
+-        var rv = store('vet_review_done_v1'); try { VStore.set('vet_review_done_snapshot_v1', JSON.stringify({ at: Date.now(), data: rv })); } catch (eSnap) {} var rec = rv[id] || {}; var _gapDays = null; try { if (rec.lastRecallAt) { var _gd = Math.round((Date.now() - new Date(rec.lastRecallAt).getTime()) / 86400000); if (isFinite(_gd) && _gd >= 0) _gapDays = _gd; } } catch (eGD) {} var _stageBefore = Number(rec.nextIndex || 0); var gaps = [1, 2, 4, 7, 15, 30]; var idx = Number(rec.nextIndex || 0);
++        var rv = store('vet_review_done_v1'); try { VStore.set('vet_review_done_snapshot_v1', JSON.stringify({ at: Date.now(), data: rv })); } catch (eSnap) {} var rec = rv[id] || {}; var _gapDays = null; var _plannedDue = rec.due || ''; try { if (rec.lastRecallAt) { var _gd = Math.round((Date.now() - new Date(rec.lastRecallAt).getTime()) / 86400000); if (isFinite(_gd) && _gd >= 0) _gapDays = _gd; } } catch (eGD) {} var _stageBefore = Number(rec.nextIndex || 0); var gaps = [1, 2, 4, 7, 15, 30]; var idx = Number(rec.nextIndex || 0);
+         if (ok) { idx = Math.min(gaps.length - 1, idx + 1); }
+         else { idx = Math.max(0, idx - 2); rec.lapses = (Number(rec.lapses) || 0) + 1; }
+         rec.nextIndex = idx;
+@@ -10840,7 +10856,11 @@
+         try { var _rt0 = Number(box.getAttribute('data-t0') || 0); var _rms = _rt0 ? (Date.now() - _rt0) : 0; if (_rms > 3000 && _rms < 3 * 60 * 1000) rec.revMs = _rms; } catch (eRMs) {}
+         rec.due = nd.toISOString().slice(0, 10); rec.source = 'review_done'; rec.lastRecallAt = new Date().toISOString(); rv[id] = rec; store('vet_review_done_v1', rv);
+         var _readMs = null; try { if (window.__memReadAt) { var _rd = Date.now() - window.__memReadAt; if (_rd > 3000 && _rd < 7200000) { _readMs = _rd; delete window.__memReadAt; } } } catch (eRM) {}
+-        try { var _rl = JSON.parse(VStore.get('vet_review_log_v1') || '[]') || []; _rl.push({ date: new Date().toISOString(), qid: id, ok: ok, interval: ok ? gaps[idx] : 1, gap: _gapDays, stage: _stageBefore, from: 'dock', writeCov: _wc, readMs: _readMs, dueTotal: dueList().length }); if (_rl.length > 500) _rl = _rl.slice(-500); VStore.set('vet_review_log_v1', JSON.stringify(_rl)); } catch (eRL) {}
++        var _chk = _gapDays == null ? 'adhoc' : (_gapDays <= 2 ? 'd1' : (_gapDays <= 10 ? 'd7' : (_gapDays <= 45 ? 'd30' : 'adhoc')));
++        try { var _rl = JSON.parse(VStore.get('vet_review_log_v1') || '[]') || []; _rl.push({ date: new Date().toISOString(), qid: id, ok: ok, checkpoint: _chk, interval: ok ? gaps[idx] : 1, gap: _gapDays, stage: _stageBefore, from: 'dock', writeCov: _wc, readMs: _readMs, dueTotal: dueList().length }); if (_rl.length > 500) _rl = _rl.slice(-500); VStore.set('vet_review_log_v1', JSON.stringify(_rl)); } catch (eRL) {}
++        /* __mem_d7_telemetry（11-07）：复习 dock 是 d7 的主入口，但原来只写 localStorage，
++           跨用户 /api/metrics/report 永远读不到 ⇒ d7 永远 0 条。这里补发同一份事件。 */
++        try { if (window.__vetMetricsSend) window.__vetMetricsSend({ qid: id, event_type: 'recall', checkpoint: _chk, planned_due: _plannedDue, score: ok ? 1 : 0, pass: ok, stage: _stageBefore, variants_done: Number(rec.variants_done) || 0, variants_correct: Number(rec.variants_correct) || 0, error_type: rec.error_type || '', hint_level: Number(rec.hint_level) || 0, metacog: Number(rec.metacog) || 0 }); } catch (eMS) {}
+         try { var _oo = obligLoad(); if (_oo.done.indexOf(id) < 0) _oo.done.push(id); obligSave(_oo); var _rem = Math.max(0, _oo.target - _oo.done.length); showOblig(_rem, _rem === 0); } catch (eOO) {}
+         if (!ok && box) {
+           box.insertAdjacentHTML('beforeend', '<div class="mem-rv-why" data-why-qid="' + esc(id) + '">错因（只标一次）：<button type="button" class="btn" data-mem-why="没图">没图</button><button type="button" class="btn" data-mem-why="串不起">串不起</button><button type="button" class="btn" data-mem-why="术语错">术语错</button><button type="button" class="btn" data-mem-why="写不出">写不出</button></div>');
